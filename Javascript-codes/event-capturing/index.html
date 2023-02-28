@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Event Bubbling</title>
+    <style>
+      body * {
+        margin: 10px;
+        border: 1px solid red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form>
+      FORM
+      <div>
+        DIV
+        <p>P</p>
+      </div>
+    </form>
+    <script>
+      // 요소를 클릭하면 가장 처음 캡쳐링 진행 됨
+      for (let elem of document.querySelectorAll("*")) {
+        // capturing = true
+        elem.addEventListener(
+          "click",
+          (e) => alert(`캡쳐링: ${elem.tagName}`),
+          true
+        );
+        // bubbling
+        elem.addEventListener("click", (e) => alert(`버블링: ${elem.tagName}`));
+      }
+    </script>
+  </body>
+</html>
