@@ -1,3 +1,27 @@
+// UI 이벤트
+// - load
+// - change
+// - resize
+// - scroll
+// - error
+
+// 키보드 이벤트
+// -keydown
+// - keyup
+// - keypress :누르고 문자가 입력되야 발생
+
+// 마우스 이벤트
+// - click
+// - mouseover
+// - mousemove
+// - mousedown
+
+// 포커스 이벤트
+
+// 폼 이벤트
+
+// ----------------------------------------------------
+
 // 마우스 이벤트
 
 const submitBtn = document.querySelector(".submit-btn");

@@ -33,8 +33,10 @@ const audio2 = {
       // this는 window 객체 !
       // title이 없어서 undefined
       //    => this를 마지막에 넣어줘야 들어감
+      //    => 해당 this는 callback 함수에 있는 게 아닌, 메서드 안에 있는 것 ! 
       console.log(`title: ${this.title}, category: ${category}`);
-    }, this);
+    },
+    this);
   },
 };
 
@@ -48,6 +50,7 @@ const audio3 = {
   categories: ["rock", "pop", "hiphop", "jazz"],
   displayCategories() {
     // 상위 객체를 가리킴
+    // 여기서의 this는 메소드를 가리키므로 title을 받아올 수 있는 것 !
     this.categories.forEach((category) => {
       console.log(`title: ${this.title}, category: ${category}`);
     });

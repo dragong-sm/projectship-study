@@ -28,6 +28,7 @@ li.appendChild(link);
 
 // -----------------------------------------------------
 
+// removeChild
 // element 지우기
 
 const listParent = document.querySelector("ul");
@@ -37,6 +38,7 @@ listParent.removeChild(list[1]);
 
 // -----------------------------------------------------
 
+// replaceChild 
 // element 바꾸기
 
 const oldElement = document.getElementById("a");
@@ -45,5 +47,5 @@ const oldElement = document.getElementById("a");
 const newElement = document.createElement("span");
 newElement.textContent = "Hi";
 
-// oldElement를 newElement로 변경
+// replaceChild : oldElement를 newElement로 변경
 listParent.replaceChild(newElement, oldElement);

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Event Capturing</title>
+    <!-- 위에서 아래로 -->
+    <style>
+      body * {
+        margin: 10px;
+        border: 1px solid red;
+      }
+    </style>
+  </head>
+  
+  <body>
+    <form onclick="alert('form')">
+      FORM
+      <div onclick="alert('div')">
+        DIV
+        <!-- e.stopPropagation() -->
+  <!--핸들러에게 이벤트를 완전히 처리하고 난 후, 버블링 중단하도록 명령 -->
+        <p onclick="event.stopPropagation()">P</p>
+      </div>
+    </form>
+  </body>
+</html>

@@ -39,3 +39,21 @@ fullName3.apply(personal, ["Oslo", "Norway"]);
 // ------------------------------------------------
 
 // Bind()
+
+// this가 window 객체 대신 다른 게 나오게 만듦
+// 함수를 실핸하지 않고 반환함
+function func(language){
+  if(language === "kor"){
+    console.log(`language: ${this.korGreeting}`);
+  }else{
+    console.log(`language: ${this.engGreeting}`)
+  }
+}
+
+const greeting = {
+  korGreeting : "안녕",
+  engGreeting : "HEllo"
+}
+
+const boundFunc = func.bind(greeting);
+boundFunc('kor');

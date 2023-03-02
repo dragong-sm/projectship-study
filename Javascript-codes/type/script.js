@@ -8,11 +8,11 @@
 // ** 원시타입 | Primitive type (불변성을 가짐) **
 
 // Boolean(참/거짓), String(문자열), Number(숫자),
-// null(하나의 값, 의도적으로 없음을 나타냄),
-// undefined(하나의 값, 초기화되지 않은 변수의 기본값),
+// null(하나의 값, 의도적으로 없음을 나타냄), => null은 소문자 ! NULL, Null과 다름
+// undefined(하나의 값, 초기화되지 않은 변수의 기본값) => 아무 값도 할당받지 않은 상태
 // Symbol(변경불가능한 유일한 값을 생성할 때 사용 (ES6에서 새로 생김))
 
-// ** 참조타입 |Object type **
+// ** 참조타입 | Object type **
 // Object, Array, Function, Class, Object Literal
 
 // Templete Literal 이란? 백틱을 사용한 문자열
