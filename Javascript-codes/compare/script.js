@@ -13,7 +13,7 @@ console.log(obj1 === obj2); // false
 // => 얕은 비교와 달리 객체의 경우에도 "값" 비교
 
 // 1. 객체의 깊이가 깊지 않은 경우? => JSON.stringify() 사용
-// 2. 객체의 깊ㅍ이가 깊은 경우? => lodash 라이브러리의 isEqual() 사용
+// 2. 객체의 깊이가 깊은 경우? => lodash 라이브러리의 isEqual() 사용
 const objA = { a: 1, b: 2 };
 const objB = { a: 1, b: 2 };
 
