@@ -1,0 +1,8 @@
+⭐ React Hooks
+- ReactConf 2018에서 발표
+- class 없이 state를 사용할 수 있는 기능
+
+📌 리액트 생명주기
+- Mounting
+- Updating
+- Unmounting
