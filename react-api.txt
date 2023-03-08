@@ -1,0 +1,12 @@
+✍️ fetch() 메소드
+- 원격 API에 요청을 보내기 위해 사용할 수 있는 메소드
+- 전역 fetch()메소드는 네트워크에서 리소스를 가져오는 프로세스를 시작하여,
+    Response응답을 사용할 수 있게 되면 이행된 Promise 약속은 Rreturn
+
+✍️ Axios
+- 브라우저, Node.js를 위한 Promise API를 활용하는 HTTP 비동기 통신 라이브러리
+- axios 모듈 설치 필요 !
+    => npm install axios --save
+- 사용법
+    => import axios from "axios";
+    => axios.get("Rest API주소") ... 여러 가지
