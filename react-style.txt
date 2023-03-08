@@ -1,0 +1,12 @@
+✍️ Styled Component
+- Css in-Js라고 하는 JavaScript 파일 안에서 CSS를 처리할 수 있게 해주는 라이브러리
+- 설치 방법
+    => npm install --save styled-components
+    => yarn add styled-components
+- 사용
+    => import styeld from "styled-components"
+- porps를 내려줄 수 있음 !
+    => width : `${width}`
+- 가상요소선택자 :: 
+    => &:before{} / &:after{}
+

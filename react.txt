@@ -111,3 +111,10 @@
     - ES7+ React/Redux/React-Native snippets 설치
         - class 컴포넌트 생성해줌 (rcc / rfc / rce + tab)
 
+✔️ JSON Placeholder
+- 가짜 데이터가 필요할 때마다 사용할 수 있는 무료 온라인 Rest API
+- posts, users, photos 등 여러 가지
+
+✔️ the movie db API
+- The MovieDB Website 가입 후, API_KEY 받아서 이용
+- 영화 정보 데이터를 보내주는 Rest API
