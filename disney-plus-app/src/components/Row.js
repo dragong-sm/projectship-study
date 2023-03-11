@@ -1,9 +1,19 @@
-import React, { useEffect, useState } from "react";
-import axios from "../api/axios";
-import MovieModal from "./MovieModal/MovieModal";
+import React, { useEffect, useState } from 'react'
+import axios from '../api/axios'
+import MovieModal from './MovieModal/MovieModal';
 import "./Row.css";
 
+import { Navigation, Pagination, Scrollbar } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+
+
 const Row = ({ title, id, fetchUrl }) => {
+
   const [movies, setMovies] = useState([]);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -12,7 +22,7 @@ const Row = ({ title, id, fetchUrl }) => {
 
   useEffect(() => {
     fetchMovieData();
-  }, []);
+  }, [])
 
   const fetchMovieData = async () => {
     try {
@@ -21,28 +31,21 @@ const Row = ({ title, id, fetchUrl }) => {
     } catch (error) {
       console.error(error);
     }
-  };
+  }
 
   const handleClick = (movie) => {
     setMovieSelected(movie);
     setIsModalOpen(true);
-  };
+  }
   // console.log(movieSelected);
 
   return (
     <div>
       <h2>{title}</h2>
-      <div className="slider">
-        <div className="slider__arrow-left">
-          <span
-            className="arrow"
-            onClick={() => {
-              document.getElementById(id).scrollLeft -= window.innerWidth - 80;
-            }}
-          >
-            {"<"}
-          </span>
-        </div>
+
+      <Swiper
+        modules={[Navigation, Pagination, Scrollbar]}
+      >
 
         <div id={id} className="row__posters">
           {movies.map((movie) => (
@@ -56,23 +59,19 @@ const Row = ({ title, id, fetchUrl }) => {
           ))}
         </div>
 
-        <div className="slider__arrow-right">
-          <span
-            className="arrow"
-            onClick={() => {
-              document.getElementById(id).scrollLeft += window.innerWidth - 80;
-            }}
-          >
-            {">"}
-          </span>
-        </div>
-      </div>
+      </Swiper>
 
-      {isModalOpen ? (
-        <MovieModal {...movieSelected} setIsModalOpen={setIsModalOpen} />
-      ) : null}
+
+      {isModalOpen ?
+        <MovieModal
+          {...movieSelected}
+          setIsModalOpen={setIsModalOpen}
+        />
+        : null
+      }
+
     </div>
-  );
-};
+  )
+}
 
-export default Row;
+export default Row
