@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react'
+import styled from 'styled-components'
 
 const Category = () => {
   return (
@@ -35,8 +35,8 @@ const Category = () => {
         </video>
       </Wrap>
     </Container>
-  );
-};
+  )
+}
 
 const Wrap = styled.div`
   padding-top: 56.25%;
@@ -81,7 +81,8 @@ const Wrap = styled.div`
       opacity: 1;
     }
   }
-`;
+`
+
 
 const Container = styled.div`
   margin-top: 30px;
@@ -93,6 +94,7 @@ const Container = styled.div`
   @media (max-width: 768px) {
     grid-template-columns: repeat(1, 1fr);
   }
-`;
+`
 
-export default Category;
+
+export default Category
